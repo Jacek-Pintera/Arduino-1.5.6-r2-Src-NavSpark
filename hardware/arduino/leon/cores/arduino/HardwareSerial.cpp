@@ -24,7 +24,7 @@
 #include "stdint.h"
 #include "sti_gnss_lib.h"
 #include "HardwareSerial.h"
-#include "Wiring_intr.h"
+#include "wiring_intr.h"
 
 // **********************************************************************
 // Description: declaration of functions exported in C naming convention
@@ -143,7 +143,7 @@ void HardwareSerial::begin(uint32_t baudrate)
 	recv.tail = 0;
 	recv.numData = 0;
 	// set the baudrate
-	if ((baudrate >= 4800) && (baudrate <= 460800)) {
+	if ((baudrate >= 4800) && (baudrate <= 921600)) {
 		valueBaudRate = baudrate;
 	}
 	// set the serial port
